@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NovaLog CEDIS, simulador académico de seguridad operacional basado en el ciclo PHVA.">
+  <title>NovaLog CEDIS | Simulador PHVA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-view="dashboard" aria-label="Ir al panel principal">
+        <span class="brand-mark">NL</span>
+        <span><strong>NovaLog</strong><small>CEDIS · Simulador PHVA</small></span>
+      </button>
+      <div class="topbar-actions">
+        <span class="demo-badge">● Datos locales del ejercicio</span>
+        <button class="secondary-btn" id="printBtn">Imprimir reporte</button>
+      </div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <p class="eyebrow">Ciclo PHVA</p>
+        <nav id="mainNav" aria-label="Módulos del simulador">
+          <button class="nav-item active" data-view="dashboard"><span>▦</span>Panel principal</button>
+          <button class="nav-item" data-view="scope"><span>◎</span>Información y alcance</button>
+          <button class="nav-item" data-view="diagnosis"><span>✓</span>Diagnóstico inicial</button>
+          <button class="nav-item" data-view="risks"><span>△</span>Matriz de riesgos</button>
+          <button class="nav-item" data-view="controls"><span>◈</span>Controles y procedimientos</button>
+          <button class="nav-item" data-view="inspections"><span>▤</span>Inspecciones</button>
+          <button class="nav-item" data-view="incidents"><span>!</span>Incidentes</button>
+          <button class="nav-item" data-view="audit"><span>◌</span>Indicadores y auditoría</button>
+          <button class="nav-item" data-view="actions"><span>↗</span>Acciones correctivas</button>
+          <button class="nav-item" data-view="reports"><span>▧</span>Reportes y evidencias</button>
+          <button class="nav-item" data-view="help"><span>?</span>Ayuda y funcionamiento</button>
+        </nav>
+        <div class="sidebar-note"><strong>Ejercicio académico</strong><p>Los datos son ficticios y no representan una certificación ni auditoría real.</p></div>
+      </aside>
+      <main id="app" class="content"></main>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
